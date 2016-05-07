@@ -8,8 +8,34 @@
 
 #import <UIKit/UIKit.h>
 
-@interface imgController : UIViewController
+@interface imgController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+{
+    UIImagePickerController *picker;
+    UIImagePickerController *picker2;
+    UIImage *imageF;
+    
+    
+    
+    UIImagePickerController *pickerP2;
+    UIImage *imagePers;
+    
+    
 
+IBOutlet UIView *viewContenedor;
+    
+IBOutlet UIImageView *imgFondo;
+    
+IBOutlet UIImageView *imgPersonaje;
+    
+}
+@property (strong, nonatomic) IBOutlet UITextField *txtImagen;
+
+
+- (IBAction)btnGuardar:(UIButton *)sender;
+
+- (IBAction)btnFondo:(id)sender;
+
+- (IBAction)btnPersonaje:(UIButton *)sender;
 
 @end
 
