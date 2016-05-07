@@ -6,13 +6,13 @@
 //  Copyright © 2016 Elizabeth Martínez Gómez. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "imgController.h"
 
-@interface ViewController ()
+@interface imgController ()
 
 @end
 
-@implementation ViewController
+@implementation imgController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

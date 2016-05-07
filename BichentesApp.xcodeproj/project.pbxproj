@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		26FAB2FC1CDE241400CE3B9C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FAB2FB1CDE241400CE3B9C /* main.m */; };
 		26FAB2FF1CDE241400CE3B9C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FAB2FE1CDE241400CE3B9C /* AppDelegate.m */; };
-		26FAB3021CDE241400CE3B9C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FAB3011CDE241400CE3B9C /* ViewController.m */; };
+		26FAB3021CDE241400CE3B9C /* imgController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FAB3011CDE241400CE3B9C /* imgController.m */; };
 		26FAB3051CDE241400CE3B9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26FAB3031CDE241400CE3B9C /* Main.storyboard */; };
 		26FAB3081CDE241400CE3B9C /* BichentesApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 26FAB3061CDE241400CE3B9C /* BichentesApp.xcdatamodeld */; };
 		26FAB30A1CDE241400CE3B9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26FAB3091CDE241400CE3B9C /* Assets.xcassets */; };
@@ -21,8 +21,8 @@
 		26FAB2FB1CDE241400CE3B9C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		26FAB2FD1CDE241400CE3B9C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		26FAB2FE1CDE241400CE3B9C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		26FAB3001CDE241400CE3B9C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		26FAB3011CDE241400CE3B9C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		26FAB3001CDE241400CE3B9C /* imgController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = imgController.h; sourceTree = "<group>"; };
+		26FAB3011CDE241400CE3B9C /* imgController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = imgController.m; sourceTree = "<group>"; };
 		26FAB3041CDE241400CE3B9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		26FAB3071CDE241400CE3B9C /* BichentesApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BichentesApp.xcdatamodel; sourceTree = "<group>"; };
 		26FAB3091CDE241400CE3B9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,10 +60,10 @@
 		26FAB2F91CDE241400CE3B9C /* BichentesApp */ = {
 			isa = PBXGroup;
 			children = (
+				26FAB3151CDE242800CE3B9C /* Controllers */,
+				26FAB3141CDE241B00CE3B9C /* main */,
 				26FAB2FD1CDE241400CE3B9C /* AppDelegate.h */,
 				26FAB2FE1CDE241400CE3B9C /* AppDelegate.m */,
-				26FAB3001CDE241400CE3B9C /* ViewController.h */,
-				26FAB3011CDE241400CE3B9C /* ViewController.m */,
 				26FAB3031CDE241400CE3B9C /* Main.storyboard */,
 				26FAB3091CDE241400CE3B9C /* Assets.xcassets */,
 				26FAB30B1CDE241400CE3B9C /* LaunchScreen.storyboard */,
@@ -80,6 +80,22 @@
 				26FAB2FB1CDE241400CE3B9C /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		26FAB3141CDE241B00CE3B9C /* main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = main;
+			sourceTree = "<group>";
+		};
+		26FAB3151CDE242800CE3B9C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				26FAB3001CDE241400CE3B9C /* imgController.h */,
+				26FAB3011CDE241400CE3B9C /* imgController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,7 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26FAB3021CDE241400CE3B9C /* ViewController.m in Sources */,
+				26FAB3021CDE241400CE3B9C /* imgController.m in Sources */,
 				26FAB2FF1CDE241400CE3B9C /* AppDelegate.m in Sources */,
 				26FAB2FC1CDE241400CE3B9C /* main.m in Sources */,
 				26FAB3081CDE241400CE3B9C /* BichentesApp.xcdatamodeld in Sources */,
