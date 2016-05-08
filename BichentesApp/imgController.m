@@ -61,16 +61,20 @@ typedef enum {
 }
 
 
-- (UIImage*)captureView:(UIView *)viewCapture
+- (UIImage*)captureView:(UIView *)viewContenedor
 {
-    CGRect rect = [[UIScreen mainScreen] bounds];
+  //  CGRect rect = [[UIScreen mainScreen] bounds];
+    CGRect rect = [[self viewContenedor] bounds];
+    rect.origin.x += 20.0f;
+    rect.origin.y += 20.0f;
+    [[self view] setBounds:rect];
+    
     UIGraphicsBeginImageContext(rect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
-    [viewCapture.layer renderInContext:context];
+    [viewContenedor.layer renderInContext:context];
     UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return img;
-    
 }
 
 
