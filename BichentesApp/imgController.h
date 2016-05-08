@@ -14,22 +14,18 @@
     UIImagePickerController *picker2;
     UIImage *imageF;
     
-    
-    
     UIImagePickerController *pickerP2;
     UIImage *imagePers;
     
     
-
-IBOutlet UIView *viewContenedor;
+    IBOutlet UIView *viewContenedor;
     
-IBOutlet UIImageView *imgFondo;
+    IBOutlet UIImageView *imgFondo;
     
-IBOutlet UIImageView *imgPersonaje;
+    IBOutlet UIImageView *imgPersonaje;
     
 }
 @property (strong, nonatomic) IBOutlet UITextField *txtImagen;
-
 
 - (IBAction)btnGuardar:(UIButton *)sender;
 

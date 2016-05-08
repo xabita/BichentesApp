@@ -13,16 +13,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rUG-iT-InP" userLabel="btnFondo">
+                                <rect key="frame" x="41" y="416" width="44" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Fondo"/>
+                                <connections>
+                                    <action selector="btnFondo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3CV-CF-1b7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SpE-7S-dms">
+                                <rect key="frame" x="186" y="416" width="125" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Personaje"/>
+                                <connections>
+                                    <action selector="btnPersonaje:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XaU-6p-rVN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="z2z-SP-kVs">
+                                <rect key="frame" x="118" y="372" width="56" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Guardar"/>
+                                <connections>
+                                    <action selector="btnGuardar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Faf-zP-kYN"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" id="vG5-2Z-KYP" userLabel="ViewContenedor">
-                                <rect key="frame" x="0.0" y="24" width="320" height="340"/>
+                                <rect key="frame" x="41" y="24" width="320" height="340"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="oGT-Cr-ns0">
                                         <rect key="frame" x="0.0" y="20" width="320" height="312"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6my-TR-hGi">
-                                        <rect key="frame" x="30" y="91" width="240" height="226"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="E5a-zU-9qS">
@@ -31,33 +51,13 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6my-TR-hGi">
+                                        <rect key="frame" x="115" y="20" width="182" height="119"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.90931294389545481" green="0.91511725416955836" blue="0.94464172979797978" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SpE-7S-dms">
-                                <rect key="frame" x="158" y="379" width="125" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Personaje"/>
-                                <connections>
-                                    <action selector="btnPersonaje:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XaU-6p-rVN"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="z2z-SP-kVs">
-                                <rect key="frame" x="121" y="417" width="56" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Guardar"/>
-                                <connections>
-                                    <action selector="btnGuardar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Faf-zP-kYN"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rUG-iT-InP" userLabel="btnFondo">
-                                <rect key="frame" x="62" y="379" width="44" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Fondo"/>
-                                <connections>
-                                    <action selector="btnFondo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3CV-CF-1b7"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -65,12 +65,13 @@
                         <outlet property="imgFondo" destination="oGT-Cr-ns0" id="UpS-la-I7S"/>
                         <outlet property="imgPersonaje" destination="6my-TR-hGi" id="eeZ-Ph-NV9"/>
                         <outlet property="txtImagen" destination="E5a-zU-9qS" id="zGB-iI-xFu"/>
-                        <outlet property="view" destination="vG5-2Z-KYP" id="PVi-XC-2X4"/>
+                        <outlet property="view" destination="8bC-Xf-vdC" id="VPC-6O-6km"/>
+                        <outlet property="viewContenedor" destination="oGT-Cr-ns0" id="FYV-l4-i1B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="151" y="347"/>
+            <point key="canvasLocation" x="74" y="141"/>
         </scene>
     </scenes>
 </document>
