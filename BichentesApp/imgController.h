@@ -20,13 +20,17 @@
    
     IBOutlet UIImageView *imgFondo;
     
-    IBOutlet UIImageView *imgPersonaje;
+   // IBOutlet UIImageView *imgPersonaje;
+    
     
 }
-@property (strong, nonatomic) IBOutlet UITextField *txtImagen;
+@property (strong, nonatomic) IBOutlet UIImageView *imgPersonaje;
+
+
+@property (strong, nonatomic) IBOutlet UITextView *txtFrase;
 
 @property (strong, nonatomic) IBOutlet UIView *viewContenedor;
- 
+
 - (IBAction)btnGuardar:(UIButton *)sender;
 
 - (IBAction)btnFondo:(id)sender;

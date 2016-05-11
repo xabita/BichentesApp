@@ -8,22 +8,36 @@
 
 #import "imgController.h"
 
-@interface imgController ()
-
-@end
-
-
 typedef enum {
     CurrentImageCategoryFondo = 0,
     CurrentImageCategoryPers
 }CurrentImageCategory;
 
 
+CGPoint firstTouchPoint;
+float xd;
+float yd;
+
+
+
+@interface imgController ()
+
+@end
+
+
+
 @implementation imgController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    _txtFrase.backgroundColor = [UIColor clearColor];
+   _imgPersonaje.backgroundColor = [UIColor clearColor];
+   _imgPersonaje.opaque = NO;
+    
+    [[self imgPersonaje]setUserInteractionEnabled:YES];
+  
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,7 +59,7 @@ typedef enum {
     else if([[NSUserDefaults standardUserDefaults] integerForKey:@"currentImageCategory"] == CurrentImageCategoryPers)
     {
         imagePers= [info objectForKey:UIImagePickerControllerOriginalImage];
-        [imgPersonaje setImage:imagePers];
+        [_imgPersonaje setImage:imagePers];
         [self dismissViewControllerAnimated:YES completion:nil];
     }
 }
@@ -65,9 +79,9 @@ typedef enum {
 {
   //  CGRect rect = [[UIScreen mainScreen] bounds];
     CGRect rect = [[self viewContenedor] bounds];
-    rect.origin.x += 20.0f;
-    rect.origin.y += 20.0f;
-    [[self view] setBounds:rect];
+   /* rect.origin.x += 0.0f;
+    rect.origin.y += 0.0f;*/
+    [[self viewContenedor] setBounds:rect];
     
     UIGraphicsBeginImageContext(rect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
@@ -101,14 +115,29 @@ typedef enum {
     [self presentViewController: pickerP2 animated:YES completion:nil];
 }
 
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    if([textField.text length] == 0) {
-        return NO;
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.viewContenedor endEditing:YES];
+    [super touchesBegan:touches withEvent:event];
+    
+    UITouch* bTouch = [touches anyObject];
+    if ([bTouch.view isEqual:[self imgPersonaje]]) {
+        firstTouchPoint = [bTouch locationInView:[self viewContenedor]];
+        xd = firstTouchPoint.x - [[bTouch view]center].x;
+        yd = firstTouchPoint.y - [[bTouch view]center].y;
     }
-    [textField resignFirstResponder];
-    return YES;
 }
+
+
+
+-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch* mTouch = [touches anyObject];
+    if (mTouch.view == [self imgPersonaje]) {
+        CGPoint cp = [mTouch locationInView:[self viewContenedor]];
+        [[mTouch view]setCenter:CGPointMake(cp.x-xd, cp.y-yd)];
+    }
+}
+
 
 
 @end
