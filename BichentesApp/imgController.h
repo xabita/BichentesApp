@@ -24,6 +24,11 @@
     
     
 }
+
+@property (strong, nonatomic) IBOutlet UIView *messageCont;
+
+@property (strong, nonatomic) IBOutlet UITextView *txtMessage;
+
 @property (strong, nonatomic) IBOutlet UIImageView *imgPersonaje;
 
 
@@ -36,6 +41,11 @@
 - (IBAction)btnFondo:(id)sender;
 
 - (IBAction)btnPersonaje:(UIButton *)sender;
+
+- (IBAction)handlePan:(UIPanGestureRecognizer *)recognizer;
+
+
+
 
 @end
 

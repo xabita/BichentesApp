@@ -13,16 +13,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SpE-7S-dms">
-                                <rect key="frame" x="195" y="532" width="125" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Personaje"/>
-                                <connections>
-                                    <action selector="btnPersonaje:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XaU-6p-rVN"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="z2z-SP-kVs">
-                                <rect key="frame" x="121" y="540" width="56" height="22"/>
+                                <rect key="frame" x="121" y="544" width="56" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Guardar"/>
                                 <connections>
@@ -37,27 +29,45 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="539"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Texto" textAlignment="center" id="so0-4S-y2r">
-                                        <rect key="frame" x="30" y="373" width="240" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <color key="textColor" red="1" green="0.8621907236808527" blue="0.20183475276169505" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="25"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6my-TR-hGi">
                                         <rect key="frame" x="46" y="101" width="208" height="222"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <view contentMode="scaleToFill" id="gKj-a8-sdJ">
+                                        <rect key="frame" x="41" y="340" width="218" height="148"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Ingrese mensaje" textAlignment="center" id="qp7-6c-O2b">
+                                                <rect key="frame" x="14" y="8" width="190" height="140"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="37"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Qwk-Qs-PnD" appends="YES" id="NMF-Es-tsG"/>
+                                        </connections>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.90931294389545481" green="0.91511725416955836" blue="0.94464172979797978" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rUG-iT-InP" userLabel="btnFondo">
-                                <rect key="frame" x="20" y="532" width="44" height="30"/>
+                                <rect key="frame" x="20" y="538" width="44" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Fondo"/>
                                 <connections>
                                     <action selector="btnFondo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3CV-CF-1b7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SpE-7S-dms">
+                                <rect key="frame" x="222" y="540" width="98" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Personaje"/>
+                                <connections>
+                                    <action selector="btnPersonaje:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XaU-6p-rVN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -66,12 +76,18 @@
                     <connections>
                         <outlet property="imgFondo" destination="oGT-Cr-ns0" id="UpS-la-I7S"/>
                         <outlet property="imgPersonaje" destination="6my-TR-hGi" id="eeZ-Ph-NV9"/>
-                        <outlet property="txtFrase" destination="so0-4S-y2r" id="eLg-Rx-2S6"/>
+                        <outlet property="messageCont" destination="gKj-a8-sdJ" id="wYy-Wt-5vU"/>
+                        <outlet property="txtMessage" destination="qp7-6c-O2b" id="FEf-vz-Uiq"/>
                         <outlet property="view" destination="8bC-Xf-vdC" id="sqp-dA-8Ou"/>
                         <outlet property="viewContenedor" destination="vG5-2Z-KYP" id="TLj-zK-yRu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Qwk-Qs-PnD">
+                    <connections>
+                        <action selector="handlePan:" destination="BYZ-38-t0r" id="0fn-Iw-yyS"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="74" y="141"/>
         </scene>

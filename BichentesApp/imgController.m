@@ -18,8 +18,6 @@ CGPoint firstTouchPoint;
 float xd;
 float yd;
 
-
-
 @interface imgController ()
 
 @end
@@ -31,8 +29,9 @@ float yd;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _txtMessage.backgroundColor=[UIColor clearColor];
+    _messageCont.backgroundColor=[UIColor clearColor];
     
-    _txtFrase.backgroundColor = [UIColor clearColor];
    _imgPersonaje.backgroundColor = [UIColor clearColor];
    _imgPersonaje.opaque = NO;
     
@@ -136,6 +135,11 @@ float yd;
         CGPoint cp = [mTouch locationInView:[self viewContenedor]];
         [[mTouch view]setCenter:CGPointMake(cp.x-xd, cp.y-yd)];
     }
+}
+
+
+- (IBAction)handlePan:(UIPanGestureRecognizer *)recognizer { CGPoint translation = [recognizer translationInView:self.view]; recognizer.view.center = CGPointMake(recognizer.view.center.x + translation.x, recognizer.view.center.y + translation.y); [recognizer setTranslation:CGPointMake(0, 0) inView:self.view];
+    
 }
 
 
