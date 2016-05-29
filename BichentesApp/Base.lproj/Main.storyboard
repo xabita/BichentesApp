@@ -32,6 +32,12 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6my-TR-hGi">
                                         <rect key="frame" x="46" y="101" width="208" height="222"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.82721748737373735" green="0.7522509495807751" blue="0.79739502491887637" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="hNZ-go-005" appends="YES" id="Csx-jz-nDg"/>
+                                            <outletCollection property="gestureRecognizers" destination="5Gl-ZS-WMP" appends="YES" id="MgH-bL-BrE"/>
+                                        </connections>
                                     </imageView>
                                     <view contentMode="scaleToFill" id="gKj-a8-sdJ">
                                         <rect key="frame" x="41" y="340" width="218" height="148"/>
@@ -41,11 +47,16 @@
                                                 <rect key="frame" x="14" y="8" width="190" height="140"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="37"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="rFN-sh-Nzn" appends="YES" id="Mfo-13-koY"/>
+                                                    <outletCollection property="gestureRecognizers" destination="U5S-Dq-AhQ" appends="YES" id="Na6-SE-8tb"/>
+                                                </connections>
                                             </textView>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="Qwk-Qs-PnD" appends="YES" id="NMF-Es-tsG"/>
@@ -88,8 +99,28 @@
                         <action selector="handlePan:" destination="BYZ-38-t0r" id="0fn-Iw-yyS"/>
                     </connections>
                 </panGestureRecognizer>
+                <rotationGestureRecognizer id="hNZ-go-005">
+                    <connections>
+                        <action selector="handleRatationImg:" destination="BYZ-38-t0r" id="Ndg-nm-QIK"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <rotationGestureRecognizer id="rFN-sh-Nzn">
+                    <connections>
+                        <action selector="handleRotationTxt:" destination="BYZ-38-t0r" id="Hc2-3u-UhD"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <pinchGestureRecognizer id="5Gl-ZS-WMP">
+                    <connections>
+                        <action selector="handlePinchImg:" destination="BYZ-38-t0r" id="eWC-GI-n6a"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <pinchGestureRecognizer id="U5S-Dq-AhQ">
+                    <connections>
+                        <action selector="handlePinchTxt:" destination="BYZ-38-t0r" id="80t-93-OKJ"/>
+                    </connections>
+                </pinchGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="74" y="141"/>
+            <point key="canvasLocation" x="188" y="128"/>
         </scene>
     </scenes>
 </document>

@@ -21,9 +21,13 @@
     IBOutlet UIImageView *imgFondo;
     
    // IBOutlet UIImageView *imgPersonaje;
-    
-    
+  
 }
+
+
+
+@property(nonatomic, getter=isUserInteractionEnabled) BOOL userInteractionEnabled;
+
 
 @property (strong, nonatomic) IBOutlet UIView *messageCont;
 
@@ -44,7 +48,16 @@
 
 - (IBAction)handlePan:(UIPanGestureRecognizer *)recognizer;
 
+- (IBAction)handleRatationImg:(UIRotationGestureRecognizer *)recognizerImg;
 
+
+- (IBAction)handleRotationMsg:(UIRotationGestureRecognizer *)recognizerRotMsg;
+
+- (IBAction)handleRotationTxt:(UIRotationGestureRecognizer *)recognizerRotTxt;
+
+- (IBAction)handlePinchImg:(UIPinchGestureRecognizer *)recognizerPinchImg;
+
+- (IBAction)handlePinchTxt:(UIPinchGestureRecognizer *)recognizerPinchTxt;
 
 
 @end
